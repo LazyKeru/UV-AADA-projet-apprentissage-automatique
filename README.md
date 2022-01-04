@@ -17,6 +17,16 @@ The objective of this project is to create a system which recognizes human actio
 - refactor: A code change that neither fixes a bug nor adds a feature
 - test: Adding missing tests or correcting existing tests
 
-## Libraries needed / used
+## Libraries needed / used :
 
 numpy, pandas, matplotlib, SciPy, Scikit-Learn
+
+## To do list :
+
+- [X] load_data function
+- [X] trace_signal function
+- [ ] feature_extraction function
+- [ ] function for preparing the data for machine learning
+- [ ] function for training our model
+- [ ] function to test or model
+- [ ] classification_report function
