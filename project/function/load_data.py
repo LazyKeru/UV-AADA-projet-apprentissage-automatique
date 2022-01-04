@@ -14,7 +14,7 @@ def load_data(path):
     # column 6 : id of the subject
     # column 7 : id of the experiment
     # column 8 : id of the action
-    columns = ['acc_x', 'acc_y', 'acc_z', 'gyr_x', 'gyr_y', 'gyr_z', 'subject', 'experience', 'action']
+    columns_name = ['acc_x', 'acc_y', 'acc_z', 'gyr_x', 'gyr_y', 'gyr_z', 'subject', 'experience', 'action']
 
     # All the data will be put in an array with each item having the following shape : ([A][B][C][D][E][F][G][H][I])
     data_array = np.empty(shape=(1, 9))
@@ -41,6 +41,6 @@ def load_data(path):
 
     # deletes the first column
     data_array = np.delete(data_array, 0, 0)
-    df = pd.DataFrame(data_array,  columns=col_names)
+    df = pd.DataFrame(data_array,  columns=columns_name)
 
     return df
