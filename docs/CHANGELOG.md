@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.0.0...v1.1.0) (2022-01-04)
+
+
+### Features
+
+* added a test for load_data module ([90a27d7](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/90a27d76ab1f82a35159aa64080ca51c820b5706))
+* added the load_data.py function ([4fc36f3](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/4fc36f3cde365c129de405438adaf6b717f2d34a))
+
 # 1.0.0 (2022-01-04)
 
 
