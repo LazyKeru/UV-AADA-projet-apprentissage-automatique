@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.1.0...v1.1.1) (2022-01-04)
+
+
+### Bug Fixes
+
+* changed the name of some variables, without changing them all ([8cf5f49](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/8cf5f49fc8df580c2a309d7578983baa23e3c70f))
+* load_data.py is now working ([a1ee29d](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/a1ee29d2bd6a128146d143233a9c81f3ab7a5356))
+
 # [1.1.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.0.0...v1.1.0) (2022-01-04)
 
 
