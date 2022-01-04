@@ -23,4 +23,4 @@ df = pd.DataFrame({'acc_x': [-0.959717, -0.964355, -0.976807],
                    'experiment': [2.0, 2.0, 2.0],
                    'action': [10.0, 10.0, 10.0]})
 
-print(feature_extraction(df))
+print(pf.feature_extraction(df))

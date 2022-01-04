@@ -9,28 +9,28 @@ import pandas as pd
 
 def feature_extraction(df):
     # calcul un vecteur pour chaque action humaine
-    actions_features = {}
-    capteur_features = {}
-    for subject in range(1,df.max(subject)):
-        for experiment in range(1,df.max(experiment)):
-            for action in range(1,df.max(action)):
+    features = {}
+    signal_features = {}
+    for subject in range(int(df['subject'].max())):
+        for experiment in range(int(df['experiment'].max())):
+            for action in range(int(df['action'].max())):
                 for signal in df.columns[0:6]:
                     #fetching the vector of the signal
-                    vector = df.loc[(df['action'] == action) & (df['subject'] == subject) & (df['experiment'] == experiment), [capteur]]
-                    #extracting the features fo the capteur
-                    capteur_features[f"mean_{capteur}"] = float(vector.mean())
-                    capteur_features[f"std_{capteur}"] = float(vector.std())
-                    capteur_features[f"median_{capteur}"] = float(vector.median())
-                    capteur_features[f"mad_{capteur}"] = float(vector.mad())
-                    capteur_features[f"first_quant_{capteur}"] = float(vector.quantile(q=0.25))
-                    capteur_features[f"third_quant_{capteur}"] = float(vector.quantile(q=0.75))
-                    capteur_features[f"min_{capteur}"] = float(vector.min())
-                    capteur_features[f"max_{capteur}"] = float(vector.max())
-                    capteur_features["action"] = action
+                    vector = df.loc[(df['action'] == action) & (df['subject'] == subject) & (df['experiment'] == experiment), [signal]]
+                    #extracting the features fo the signal
+                    signal_features[f"mean_{signal}"] = float(vector.mean())
+                    signal_features[f"std_{signal}"] = float(vector.std())
+                    signal_features[f"median_{signal}"] = float(vector.median())
+                    signal_features[f"mad_{signal}"] = float(vector.mad())
+                    signal_features[f"first_quant_{signal}"] = float(vector.quantile(q=0.25))
+                    signal_features[f"third_quant_{signal}"] = float(vector.quantile(q=0.75))
+                    signal_features[f"min_{signal}"] = float(vector.min())
+                    signal_features[f"max_{signal}"] = float(vector.max())
+                    signal_features["action"] = action
                 # adding the features of an action
-                features[(subject, experience, action)] = capteur_features
-                # reseting the capteur_features for the next action
-                capteur_features
+                features[(subject, experiment, action)] = signal_features
+                # reseting the signal_features for the next action
+                signal_features
     # Remove missing values
     feature_df = pd.DataFrame.from_dict(features).dropna(axis=1)
     return feature_df
