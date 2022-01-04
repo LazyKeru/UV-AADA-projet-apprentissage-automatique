@@ -3,6 +3,7 @@
 import numpy as np
 import scipy.io as sio
 import os
+import pandas as pd
 
 def load_data(path):
 
@@ -16,12 +17,13 @@ def load_data(path):
     columns = ['acc_x', 'acc_y', 'acc_z', 'gyr_x', 'gyr_y', 'gyr_z', 'subject', 'experience', 'action']
 
     # All the data will be put in an array with each item having the following shape : ([A][B][C][D][E][F][G][H][I])
-    files_list = np.empty(shape=(1, 9))
+    data_array = np.empty(shape=(1, 9))
 
     for file_name in files_list:
-
+        print("Adding " + file_name + " to our data_array ")
         name_variable = 'd_iner'
         # Join various path components
+        print
         mat_fname=(os.path.join(path, file_name))
         mat_contents = sio.loadmat(mat_fname)
         mat_data = mat_contents[name_variable]
@@ -35,7 +37,7 @@ def load_data(path):
         # Join a sequence of arrays along an existing axis
         temp_array = np.concatenate([mat_data, subject, experience, action], axis=1)
         # Join a sequence of arrays along an existing axis
-        data_array = np.concatenate((data_array, tmp_array), axis=0)
+        data_array = np.concatenate((data_array, temp_array), axis=0)
 
     # deletes the first column
     data_array = np.delete(data_array, 0, 0)
