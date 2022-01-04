@@ -25,7 +25,7 @@ numpy, pandas, matplotlib, SciPy, Scikit-Learn
 
 - [X] load_data function
 - [X] trace_signal function
-- [ ] feature_extraction function
+- [X] feature_extraction function
 - [ ] function for preparing the data for machine learning
 - [ ] function for training our model
 - [ ] function to test or model
