@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.2.0...v1.3.0) (2022-01-04)
+
+
+### Bug Fixes
+
+* The feature_extraction works ([4d570ea](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/4d570ea21e4ed666c4645342c043fc75bdf9717e))
+
+
+### Features
+
+* added feature_extraction function which copies the function of TheoTaffin/AADA ([09c4b47](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/09c4b47b31c5ecfcb22d609039717054eb02c11f))
+* added feature_extraction test ([3637da0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/3637da0b8ad4fd3e9f9d95f9e6bf771f8964e726))
+* added feature_extraction to __init__.py ([02019e3](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/02019e39b8ea006cf24f41a11da680765332bf6c))
+
 # [1.2.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.1.2...v1.2.0) (2022-01-04)
 
 
