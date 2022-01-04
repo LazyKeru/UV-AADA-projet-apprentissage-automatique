@@ -15,4 +15,11 @@ print(data)
 
 pf.trace_signal(data, 'acc', 10.0, 1.0, 2.0)
 
-print(pf.feature_extraction(data))
+extracted_data=pf.feature_extraction(data)
+print(extracted_data)
+
+train, test = pf.train_test_split_local(extracted_data)
+print("train:")
+print(train)
+print("test:")
+print(test)
