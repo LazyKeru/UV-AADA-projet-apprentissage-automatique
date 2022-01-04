@@ -1,4 +1,7 @@
 # feature_extraction
+
+import pandas as pd
+
 #   Here is a list of attributes which can be extracted:
 #   mean, root mean square, standard deviation, median, quartiles,
 #   asymmetry coefficient, Kurtosis, entropy, energy, maxima and minima, coefficient of
@@ -13,7 +16,7 @@ def feature_extraction(df):
             for action in range(1,df.max(action)):
                 for signal in df.columns[0:6]:
                     #fetching the vector of the signal
-                    vector = df.loc[(df['action'] == action) & (df['subject'] == subject) & (df['experience'] == experience), [capteur]]
+                    vector = df.loc[(df['action'] == action) & (df['subject'] == subject) & (df['experiment'] == experiment), [capteur]]
                     #extracting the features fo the capteur
                     capteur_features[f"mean_{capteur}"] = float(vector.mean())
                     capteur_features[f"std_{capteur}"] = float(vector.std())
