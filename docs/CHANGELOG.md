@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.1.2...v1.2.0) (2022-01-04)
+
+
+### Bug Fixes
+
+* trace_signal.py is now working ([b280dca](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/b280dca7e6bee62e420b6dd4a06f13311a4731df))
+
+
+### Features
+
+* added the trace_signal.py function ([f291f19](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/f291f1913bb64782ee574c440c8f10f51bd36527))
+* added trace_signal to __init__.py ([d54777c](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/d54777c9a59cde87766b8ccd098b24be74c90d9f))
+* added trace_signal.py test ([3e67f2f](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/3e67f2f67d747c70d2fbf960a1e1b4b239d2f6f9))
+
 ## [1.1.2](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.1.1...v1.1.2) (2022-01-04)
 
 
