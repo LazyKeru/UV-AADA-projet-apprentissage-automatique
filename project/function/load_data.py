@@ -18,19 +18,19 @@ def load_data(path):
     # All the data will be put in an array with each item having the following shape : ([A][B][C][D][E][F][G][H][I])
     files_list = np.empty(shape=(1, 9))
 
-    for name_file in list_files:
+    for file_name in files_list:
 
         name_variable = 'd_iner'
         # Join various path components
-        mat_fname=(os.path.join(path, name_file))
+        mat_fname=(os.path.join(path, file_name))
         mat_contents = sio.loadmat(mat_fname)
         mat_data = mat_contents[name_variable]
 
         # each file as a naming convention from which we can extract the id of the subject, of the experience and of the action
         # idAction_idSubject_idExperience
-        subject = np.full((mat_data.shape[0], 1), int(name_file.split('_')[1][1:]))
-        experience = np.full((mat_data.shape[0], 1), int(name_file.split('_')[2][1:]))
-        action = np.full((mat_data.shape[0], 1), int(name_file.split('_')[0][1:]))
+        subject = np.full((mat_data.shape[0], 1), int(file_name.split('_')[1][1:]))
+        experience = np.full((mat_data.shape[0], 1), int(file_name.split('_')[2][1:]))
+        action = np.full((mat_data.shape[0], 1), int(file_name.split('_')[0][1:]))
 
         # Join a sequence of arrays along an existing axis
         temp_array = np.concatenate([mat_data, subject, experience, action], axis=1)
