@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.1.1...v1.1.2) (2022-01-04)
+
+
+### Bug Fixes
+
+* load_data.py had a final problem which was fixed ([74a54a3](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/74a54a32fa576560305222d7aded10866780ae42))
+
 ## [1.1.1](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.1.0...v1.1.1) (2022-01-04)
 
 
