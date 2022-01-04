@@ -16,3 +16,7 @@ The objective of this project is to create a system which recognizes human actio
 - perf: A code change that improves performance
 - refactor: A code change that neither fixes a bug nor adds a feature
 - test: Adding missing tests or correcting existing tests
+
+## Libraries needed / used
+
+numpy, pandas, matplotlib, SciPy, Scikit-Learn
