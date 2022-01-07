@@ -23,10 +23,11 @@ numpy, pandas, matplotlib, SciPy, Scikit-Learn
 
 ## To do list :
 
-- [X] load_data function
-- [X] trace_signal function
-- [X] feature_extraction function
-- [ ] function for preparing the data for machine learning
-- [ ] function for training our model
+- [X] load_data module
+- [X] trace_signal module
+- [X] feature_extraction module
+- [X] train_test_split_local module
+- [ ] standarize_data module
+- [ ] train_classifiers
 - [ ] function to test or model
 - [ ] classification_report function
