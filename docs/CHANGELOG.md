@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.4.0...v1.4.1) (2022-01-07)
+
+
+### Performance Improvements
+
+* simplified the train_test_split_local function for our project ([2e79707](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/2e79707429cd9c1a21f222c28fbdf77562591ed3))
+
 # [1.4.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.3.0...v1.4.0) (2022-01-04)
 
 
