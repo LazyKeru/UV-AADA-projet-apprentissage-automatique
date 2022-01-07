@@ -1,3 +1,18 @@
+# [1.4.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.3.0...v1.4.0) (2022-01-04)
+
+
+### Bug Fixes
+
+* changed experience to experiment ([35cf4d1](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/35cf4d1acc51dc6a5be4d59751c32295994f5326))
+
+
+### Features
+
+* added new functions too __init__.py ([8763515](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/8763515d4373dfd16d07e00012db97fd4ccd2aca))
+* added the train_test_split_function copied from gpascualg ([0b3ef60](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/0b3ef606ddf59eeccdd64dc2be0678237c800353))
+* adding a standarize_data function, it is not yet functional ([4cac4e6](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/4cac4e64bbbe20a84c59a71a7d6d6209dadadfa4))
+* global_test function, will be needed ([d3c8eb4](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/d3c8eb47483138741d250e1529e31750560f71e3))
+
 # [1.3.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.2.0...v1.3.0) (2022-01-04)
 
 
