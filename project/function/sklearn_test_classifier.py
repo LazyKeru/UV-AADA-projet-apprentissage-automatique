@@ -1,16 +1,21 @@
 # sklearn_test_classifier
 from sklearn.neural_network import MLPClassifier
+from sklearn.svm import SVC
 
 default_names = [
     "MLPClassifier", # Neural network models
-    #"SVC", # Support Vector Machines
+    "SVC", # Support Vector Machines
     #"KNeighborsClassifier", # k nearest neighbors method
     #"DecisionTreeClassifier", # decision trees
     #"Gaussian Naive Bayes", # Naïve Bayes
 ]
 
 default_classifiers = [
-    MLPClassifier(
+    (
+    MLPClassifier(),
+    {
+        'hidden_layer_sizes':
+    }
         hidden_layer_sizes=100, # default : 100
         activation='relu', # default : relu
         solver='adam', # default : adam
@@ -18,8 +23,16 @@ default_classifiers = [
         batch_size='auto', # default : auto
         max_iter=1000, # default : 200
         # Many more config : https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
+    )
     ),
-    #SVC()
+    SVC(
+        C=1.0, # default=1.0
+        kernel='rbf', # {‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’} or callable, default=’rbf’
+        degree=3, # default=3
+        gamma='scale', # {‘scale’, ‘auto’} or float, default=’scale’
+        coef0=0.0, # default=0.0
+        # Many more config : https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+    ),
     #KNeighborsClassifier('weights': ['uniform', 'distance'],'n_neighbors': [1, 3, 5, 7, 9, 11, 13, 15]),
     #DecisionTreeClassifier(criterion=['gini', 'entropy'])
 ]
@@ -57,5 +70,5 @@ def sklearn_test_classifier(x_train, x_test, y_train, y_test, names=default_name
     for name, classifier in zip(names, classifiers):
         classifier.fit(x_train, y_train)
         score = classifier.score(x_test, y_test)
-        print(str(name) + str(score))
+        print(str(name) + " : " + str(score))
         scores[name] = score
