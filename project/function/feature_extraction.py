@@ -29,10 +29,12 @@ def feature_extraction(df):
                     signal_features["action"] = action
                 # adding the features of an action
                 print(f"extracting the features for the action {action} of the subject {subject} from the experiment {experiment}")
+                # the index is : the action id, the subject id and the experiment id
                 features[(subject, experiment, action)] = signal_features
                 # reseting the signal_features for the next action
-                signal_features
+                signal_features = {}
     # Remove missing values
     feature_df = pd.DataFrame.from_dict(features).dropna(axis=1)
-    return feature_df
+    # flips the dataframe
+    return feature_df.transpose()
     pass
