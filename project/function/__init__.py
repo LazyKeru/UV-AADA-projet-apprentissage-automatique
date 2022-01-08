@@ -1,6 +1,6 @@
 # __init__.py
 
-from .sklearn_teach_classifier import sklearn_teach_classifier
+from .sklearn_teach_classifiers import sklearn_teach_classifier
 from .sklearn_classifier import sklearn_classifier
 from .standarize_data import standarize_data
 from .train_test_split_local import train_test_split_local

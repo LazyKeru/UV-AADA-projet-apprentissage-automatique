@@ -1,4 +1,4 @@
-# sklearn_test_classifier
+# sklearn_teach_classifiers
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 
@@ -32,7 +32,7 @@ default_classifiers = [
     #DecisionTreeClassifier(criterion=['gini', 'entropy'])
 ]
 
-def sklearn_teach_classifier(x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers):
+def sklearn_teach_classifiers(x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers):
     '''
     names = [
         "Nearest Neighbors",
