@@ -8,7 +8,11 @@ import pandas as pd
 #   correlation, histogram, zero crossings, number of peak occurrences.
 
 def feature_extraction(df):
-    # calcul un vecteur pour chaque action humaine
+    """
+    tranforms the human action into vectors and extracts the features of those actions.
+    :param DataFrame df: DataFrame that is returned by the load_data function
+    :return: DataFrame of the extracted features
+    """
     features = {}
     signal_features = {}
     for subject in range(int(df['subject'].max())):
