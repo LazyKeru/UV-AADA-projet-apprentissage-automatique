@@ -62,7 +62,7 @@ def classifier_parameters_selection(name, classifier, parameters, x_train, x_tes
     return clf
 
 @ignore_warnings(category=ConvergenceWarning)
-def classifier_parameters_selection(report_path ,x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers,parameters=default_parameters):
+def classifier_parameters_report(report_path, x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers,parameters=default_parameters):
     """
     Exhaustive search over specified parameter for a large pannel of classifier.
     returns the best model and writes an html report
@@ -123,7 +123,7 @@ def classifier_parameters_selection(report_path ,x_train, x_test, y_train, y_tes
     </html>
     '''
     #writes the html report
-    with open('report_path', 'w') as f:
+    with open(report_path, 'w') as f:
         f.write(html)
         pass
     best_score=0

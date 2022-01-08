@@ -41,4 +41,4 @@ parameters = [
     }
 ]
 
-clf = pf.classifier_parameters_selection(report_path,x_train=x_train,x_test=x_test,y_train=y_train,y_test=y_test,names=names,classifiers=classifiers,parameters=parameters)
+clf = pf.classifier_parameters_report(report_path=report_path,x_train=x_train,x_test=x_test,y_train=y_train,y_test=y_test,names=names,classifiers=classifiers,parameters=parameters)

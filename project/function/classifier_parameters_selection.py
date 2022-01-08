@@ -43,24 +43,6 @@ default_parameters = [
     }
 ]
 
-def classifier_parameters_selection(name, classifier, parameters, x_train, x_test, y_train, y_test):
-    """
-    Exhaustive search over specified parameter for a specific classifier
-    :param array classifier: the function of the classifier
-    :param array parameters: the parameters of the classifier
-    :param dataframe x_train: the data to train the model
-    :param dataframe x_test: the data to test the model
-    :param dataframe y_train: the labels of the data to train the model
-    :param dataframe y_train: the labels of the data to test the model
-    :return: it returns the prediction
-    """
-    print(f"Start GridSearchCV for {name} classifier")
-    clf = GridSearchCV(classifier, parameters, scoring='precision_macro')
-    clf.fit(x_train, y_train)
-    clf.predict(x_test)
-    print(f"End GridSearchCV for {name} classifier")
-    return clf
-
 @ignore_warnings(category=ConvergenceWarning)
 def classifier_parameters_selection(x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers,parameters=default_parameters):
     """
@@ -76,7 +58,11 @@ def classifier_parameters_selection(x_train, x_test, y_train, y_test, names=defa
     """
     clfs = {}
     for name, classifier, parameter in zip(names, classifiers, parameters):
-        clf = classifier_parameters_selection(name, classifier, parameter, x_train, x_test, y_train, y_test)
+        print(f"Start GridSearchCV for {name} classifier")
+        clf = GridSearchCV(classifier, parameter, scoring='precision_macro')
+        clf.fit(x_train, y_train)
+        clf.predict(x_test)
+        print(f"End GridSearchCV for {name} classifier")
         clfs[name] = clf
         pass
     for name, clf in clfs.items():
