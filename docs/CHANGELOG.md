@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.5.0...v1.6.0) (2022-01-08)
+
+
+### Features
+
+* added a classifier parameters selection function ([11f4aff](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/11f4aff2bf20f18c1f2867e669702fd2e34f9161))
+
 # [1.5.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.4.1...v1.5.0) (2022-01-07)
 
 
