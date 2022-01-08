@@ -1,6 +1,9 @@
 # sklearn_test_classifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.utils._testing import ignore_warnings
+from sklearn.exceptions import ConvergenceWarning
 # classifiers, remove if your remove default
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
@@ -54,14 +57,11 @@ def classifier_parameters_selection(name, classifier, parameters, x_train, x_tes
     print(f"Start GridSearchCV for {name} classifier")
     clf = GridSearchCV(classifier, parameters, scoring='precision_macro')
     clf.fit(x_train, y_train)
-    prediction = clf.predict(x_test)
+    clf.predict(x_test)
     print(f"End GridSearchCV for {name} classifier")
-    print(f"cv_results_ for {name} classifier\n{clf.cv_results_}")
-    print(f"best_estimator_ for {name} classifier\n{clf.best_estimator_}")
-    print(f"best_params_ for {name} classifier\n{clf.best_params_}")
-    print(f"best_score_ for {name} classifier\n{clf.best_score_}")
-    return prediction
+    return clf
 
+@ignore_warnings(category=ConvergenceWarning)
 def sklearn_classifier(x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers,parameters=default_parameters):
     """
     Exhaustive search over specified parameter for a large pannel of classifier
@@ -74,11 +74,24 @@ def sklearn_classifier(x_train, x_test, y_train, y_test, names=default_names,cla
     :param array parameters: the parameters of the classifiers
     :return:
     """
-    predictions = {}
+    clfs = {}
     for name, classifier, parameter in zip(names, classifiers, parameters):
-        prediction = classifier_parameters_selection(name, classifier, parameter, x_train, x_test, y_train, y_test)
-        predictions[name] = prediction
+        clf = classifier_parameters_selection(name, classifier, parameter, x_train, x_test, y_train, y_test)
+        clfs[name] = clf
         pass
-    for name, prediction in predictions.items():
-        print(name, classification_report(y_test, prediction))
+    for name, clf in clfs.items():
+        print(f"Classification report for the best {name}\n{classification_report(y_test, clf.best_estimator_.predict(x_test))}")
+        print(f"Confusion matrix for the best {name} classifier\n{confusion_matrix(y_test,clf.best_estimator_.predict(x_test))}")
+        print(f"cv_results_ for {name} classifier\n{clf.cv_results_}")
+        print(f"best_estimator_ for {name} classifier\n{clf.best_estimator_}")
+        print(f"best_params_ for {name} classifier\n{clf.best_params_}")
+        print(f"best_score_ for {name} classifier\n{clf.best_score_}")
         pass
+    best_score=0
+    for clf in clfs.items():
+        if best_score < clf.best_score_:
+            best_score = clf.best_score_
+            best_clf = clf.best_estimator_
+            pass
+        pass
+    return best_clf

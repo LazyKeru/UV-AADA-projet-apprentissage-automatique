@@ -40,4 +40,4 @@ parameters = [
     }
 ]
 
-pf.sklearn_classifier(x_train=x_train,x_test=x_test,y_train=y_train,y_test=y_test,names=names,classifiers=classifiers,parameters=parameters)
+clf = pf.sklearn_classifier(x_train=x_train,x_test=x_test,y_train=y_train,y_test=y_test,names=names,classifiers=classifiers,parameters=parameters)
