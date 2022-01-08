@@ -88,7 +88,7 @@ def sklearn_classifier(x_train, x_test, y_train, y_test, names=default_names,cla
         print(f"best_score_ for {name} classifier\n{clf.best_score_}")
         pass
     best_score=0
-    for clf in clfs.items():
+    for name, clf in clfs.items():
         if best_score < clf.best_score_:
             best_score = clf.best_score_
             best_clf = clf.best_estimator_
