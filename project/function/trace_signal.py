@@ -6,6 +6,14 @@ import matplotlib.pyplot as plt
 
 # sensor == accelerometer or gyroscope
 def trace_signal(df,sensor,action,subject,experiment):
+    """
+    plot the three signals (x, y, z) of a sensor corresponding to an action
+    :param DataFrame df: DataFrame that is returned by the load_data function
+    :param float action: id of the action whose signal we want to trace
+    :param float subject: id of the subject whose signal we want to trace
+    :param float experiment: id of the experiment whose signal we want to trace
+    :return: Displays the three signals
+    """
     if ((sensor=="gyr") or (sensor=="gyroscope")):
         sensor="gyr"
     elif ((sensor=="acc") or (sensor=="accelerometer")):
