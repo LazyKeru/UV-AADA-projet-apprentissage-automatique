@@ -32,7 +32,7 @@ default_classifiers = [
     #DecisionTreeClassifier(criterion=['gini', 'entropy'])
 ]
 
-def sklearn_test_classifier(x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers):
+def sklearn_teach_classifier(x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers):
     '''
     names = [
         "Nearest Neighbors",
