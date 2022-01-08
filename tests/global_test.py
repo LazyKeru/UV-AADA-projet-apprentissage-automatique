@@ -30,4 +30,4 @@ print(x_test)
 print("label test:")
 print(y_test)
 
-pf.sklearn_test_classifier(x_train=x_train,x_test=x_test,y_train=y_train,y_test=y_test)
+pf.sklearn_classifier(x_train=x_train,x_test=x_test,y_train=y_train,y_test=y_test)

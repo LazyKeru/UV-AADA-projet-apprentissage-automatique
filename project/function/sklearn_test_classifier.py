@@ -11,11 +11,7 @@ default_names = [
 ]
 
 default_classifiers = [
-    (
-    MLPClassifier(),
-    {
-        'hidden_layer_sizes':
-    }
+    MLPClassifier(
         hidden_layer_sizes=100, # default : 100
         activation='relu', # default : relu
         solver='adam', # default : adam
@@ -23,7 +19,6 @@ default_classifiers = [
         batch_size='auto', # default : auto
         max_iter=1000, # default : 200
         # Many more config : https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
-    )
     ),
     SVC(
         C=1.0, # default=1.0
