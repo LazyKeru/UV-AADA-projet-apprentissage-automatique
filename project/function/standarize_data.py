@@ -1,17 +1,20 @@
 def standarize_data(train, test):
-    normalized_df = {}
+    """
+    standarize the training and test data set
+    :param DataFrame train: train dataset
+    :param DataFrame test: test dataset
+    :return: sends back the standarized data (standarized_df_train, standarized_df_test)
+    """
+    standarized_df_train = {}
+    standarized_df_test = {}
     features_name = list(df.columns)
-    features_name.remove('action')
-    for name, col in df[features_name].loc[train].items():
+    for name, col in train[features_name].items():
         # Moyenne
         mean = col.mean()
         # Ecart-types
         std = col.std()
-
-        new_vector = np.array((df[name] - mean) / std)
-
-        normalized_df[name] = new_vector
-    normalized_df['action'] = df['action']
-    normalized_df = pd.DataFrame.from_dict(normalized_df)
-
-    return normalized_df
+        standarized_df_train[name] = np.array((train[name] - mean) / std)
+        standarized_df_test[name] = np.array((test[name] - mean) / std)
+    standarized_df_train = pd.DataFrame.from_dict(standarized_df_train)
+    standarized_df_test = pd.DataFrame.from_dict(standarized_df_test)
+    return standarized_df_train, standarized_df_test
