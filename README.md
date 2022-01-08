@@ -27,9 +27,10 @@ numpy, pandas, matplotlib, SciPy, Scikit-Learn
 - [X] trace_signal module
 - [X] feature_extraction module
 - [X] train_test_split_local module
-- [ ] standarize_data module
+- [X] standarize_data module
 - [x] sklearn_teach_classifiers module
 - [x] classifier_parameters_selection module
+- [x] classifier_parameters_report module
 - [ ] tutorial
 - [ ] requirements.txt
 - [ ] better desciption
