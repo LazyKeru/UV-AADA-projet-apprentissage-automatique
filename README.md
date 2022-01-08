@@ -32,6 +32,6 @@ numpy, pandas, matplotlib, SciPy, Scikit-Learn
 - [x] classifier_parameters_selection module
 - [x] classifier_parameters_report module
 - [ ] tutorial
-- [ ] requirements.txt
+- [x] requirements.txt
 - [ ] better desciption
 - [ ] save_model module
