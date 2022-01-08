@@ -1,3 +1,15 @@
+# [1.8.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.7.0...v1.8.0) (2022-01-08)
+
+
+### Bug Fixes
+
+* fixed the classifier_parameters_report module ([6527121](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/6527121e27f2958aa3d79d27e225b3f189a7972d))
+
+
+### Features
+
+* added a function classifier_parameters_report, to write an html report (core is the same as classifier_parameters_selection function or module) ([dc5c5dd](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/dc5c5dd6fc6c55fea05ab357f7b0ab1d02a50981))
+
 # [1.7.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.6.0...v1.7.0) (2022-01-08)
 
 
