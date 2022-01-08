@@ -4,25 +4,29 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.utils._testing import ignore_warnings
 from sklearn.exceptions import ConvergenceWarning
+# to add more parameters to the default classifier
+import numpy as np
 # classifiers, remove if your remove default
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
 
 default_names = [
     "MLPClassifier", # Neural network models
     "SVC", # Support Vector Machines
     "KNeighborsClassifier", # k nearest neighbors method
-    #"DecisionTreeClassifier", # decision trees
-    #"Gaussian Naive Bayes", # Naïve Bayes
+    "DecisionTreeClassifier", # decision trees
+    "GaussianNB", # Naïve Bayes
 ]
 
 default_classifiers = [
     MLPClassifier(),
     SVC(),
     KNeighborsClassifier(),
-    DecisionTreeClassifier(criterion=['gini', 'entropy'])
+    DecisionTreeClassifier(),
+    GaussianNB(),
 ]
 
 default_parameters = [
@@ -53,6 +57,10 @@ default_parameters = [
         'criterion':['gini','entropy'],
         'max_depth':[5,10,15,20]
         # Many more config : https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+    },
+    {
+        'var_smoothing': np.logspace(0,-9, num=100),
+        # Many more config : https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
     }
 ]
 
