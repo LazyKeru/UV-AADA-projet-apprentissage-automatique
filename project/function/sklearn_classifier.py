@@ -39,15 +39,35 @@ default_parameters = [
 ]
 
 def classifier_parameters_selection(classifier, parameters, x_train, x_test, y_train, y_test):
+    """
+    Exhaustive search over specified parameter for a specific classifier
+    :param array classifier: the function of the classifier
+    :param array parameters: the parameters of the classifier
+    :param dataframe x_train: the data to train the model
+    :param dataframe x_test: the data to test the model
+    :param dataframe y_train: the labels of the data to train the model
+    :param dataframe y_train: the labels of the data to test the model
+    :return:
+    """
     clf = GridSearchCV(classifier, parameters, scoring='precision_macro')
     clf.fit(x_train, y_train)
-    predict = grid_search.predict(x_test)
+    clf.predict(x_test)
     print(grid_search.best_estimator_, grid_search.best_params_, grid_search.best_score_)
     return scores
 
 def sklearn_classifier(x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers,parameters=default_parameters):
+    """
+    Exhaustive search over specified parameter for a large pannel of classifier
+    :param dataframe x_train: the data to train the model
+    :param dataframe x_test: the data to test the model
+    :param dataframe y_train: the labels of the data to train the model
+    :param dataframe y_train: the labels of the data to test the model
+    :param array names: the names of the classifiers
+    :param array classifiers: the function of the classifiers
+    :param array parameters: the parameters of the classifiers
+    :return:
+    """
     scores = {}
-
     for name, classifier, parameter in zip(names, classifiers, parameters):
         classifier_parameters_selection(classifier, parameter, x_train, x_test, y_train, y_test)
         # classifier.fit(x_train, y_train)
