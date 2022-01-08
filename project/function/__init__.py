@@ -1,5 +1,6 @@
 # __init__.py
 
+from .classifier_parameters_report import classifier_parameters_report
 from .sklearn_teach_classifiers import sklearn_teach_classifiers
 from .classifier_parameters_selection import classifier_parameters_selection
 from .standarize_data import standarize_data

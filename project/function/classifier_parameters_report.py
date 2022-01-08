@@ -1,4 +1,4 @@
-# classifier_parameters_selection
+# classifier_parameters_report
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
