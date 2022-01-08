@@ -46,7 +46,7 @@ default_parameters = [
 @ignore_warnings(category=ConvergenceWarning)
 def classifier_parameters_selection(x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers,parameters=default_parameters):
     """
-    Exhaustive search over specified parameter for a large pannel of classifier
+    Exhaustive search over specified parameters for a large pannel of classifier
     :param dataframe x_train: the data to train the model
     :param dataframe x_test: the data to test the model
     :param dataframe y_train: the labels of the data to train the model
