@@ -1,4 +1,4 @@
-# sklearn_test_classifier
+# classifier_parameters_selection
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
@@ -62,7 +62,7 @@ def classifier_parameters_selection(name, classifier, parameters, x_train, x_tes
     return clf
 
 @ignore_warnings(category=ConvergenceWarning)
-def sklearn_classifier(x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers,parameters=default_parameters):
+def classifier_parameters_selection(x_train, x_test, y_train, y_test, names=default_names,classifiers=default_classifiers,parameters=default_parameters):
     """
     Exhaustive search over specified parameter for a large pannel of classifier
     :param dataframe x_train: the data to train the model
