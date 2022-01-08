@@ -28,6 +28,9 @@ numpy, pandas, matplotlib, SciPy, Scikit-Learn
 - [X] feature_extraction module
 - [X] train_test_split_local module
 - [ ] standarize_data module
-- [ ] train_classifiers
-- [ ] function to test or model
-- [ ] classification_report function
+- [x] sklearn_teach_classifiers module
+- [x] classifier_parameters_selection module
+- [ ] tutorial
+- [ ] requirements.txt
+- [ ] better desciption
+- [ ] save_model module
