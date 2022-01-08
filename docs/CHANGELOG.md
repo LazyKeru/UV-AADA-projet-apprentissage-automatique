@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.8.0...v1.8.1) (2022-01-08)
+
+
+### Performance Improvements
+
+* improved the standarize_data module ([dce6357](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/dce63579fa3d924d189a4037bf2e371386fa1b1f))
+
 # [1.8.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.7.0...v1.8.0) (2022-01-08)
 
 
