@@ -19,26 +19,10 @@ extracted_data=pf.feature_extraction(data)
 
 x_train, x_test, y_train, y_test = pf.train_test_split_local(extracted_data)
 
-names = [
-    "MLPClassifier", # Neural network models
-    "SVC", # Support Vector Machines
-]
+print(f"x_train before standarize_data:\n{x_train}")
+print(f"x_test before standarize_data:\n{x_test}")
 
-classifiers = [
-    MLPClassifier(),
-    SVC(),
-]
+x_train, x_test = pf.standarize_data(x_train, x_test)
 
-parameters = [
-    {
-        'hidden_layer_sizes': [100], # default : 100
-        'max_iter': [600, 800, 1000], # default : 200
-        # Many more config : https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
-    },
-    {
-        'C': [0.5, 1.0, 1.5, 2.0], # default=1.0
-        # Many more config : https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
-    }
-]
-
-clf = pf.classifier_parameters_report(report_path=report_path,x_train=x_train,x_test=x_test,y_train=y_train,y_test=y_test,names=names,classifiers=classifiers,parameters=parameters)
+print(f"x_train after standarize_data:\n{x_train}")
+print(f"x_test after standarize_data:\n{x_test}")

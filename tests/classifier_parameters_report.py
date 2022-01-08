@@ -19,6 +19,8 @@ extracted_data=pf.feature_extraction(data)
 
 x_train, x_test, y_train, y_test = pf.train_test_split_local(extracted_data)
 
+x_train, x_test = pf.standarize_data(x_train, x_test)
+
 names = [
     "MLPClassifier", # Neural network models
     "SVC", # Support Vector Machines

@@ -1,3 +1,6 @@
+import numpy as np
+import pandas as pd
+
 def standarize_data(train, test):
     """
     standarize the training and test data set
@@ -7,7 +10,7 @@ def standarize_data(train, test):
     """
     standarized_df_train = {}
     standarized_df_test = {}
-    features_name = list(df.columns)
+    features_name = list(train.columns)
     for name, col in train[features_name].items():
         # Moyenne
         mean = col.mean()
