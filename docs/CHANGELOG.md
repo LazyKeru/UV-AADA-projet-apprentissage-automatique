@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.4.1...v1.5.0) (2022-01-07)
+
+
+### Features
+
+* added the sklearn_test_classification, it returns a simple score ([70a5473](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/70a5473613fe69bd3a93f76a5f31f2ac76f313fe))
+
 ## [1.4.1](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.4.0...v1.4.1) (2022-01-07)
 
 
