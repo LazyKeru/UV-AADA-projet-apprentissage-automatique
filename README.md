@@ -3,7 +3,7 @@ The objective of this project is to create a system for recognizing human action
 
 ## Flowchart of our project
 
-flowchart LR
+graph LR
     dataset(Data collected)--load_data-->load_data(Function which takes our dataset and tranforms it into a dataFrame with which we can work)
     load_data--feature_extraction-->feature_extraction(Function which tranforms the human action into vectors and extracts the features of those actions)
     feature_extraction--train_test_split_local-->train_test_split_local(Function which divides the data frame into four parts)
