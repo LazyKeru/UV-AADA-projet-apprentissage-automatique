@@ -1,3 +1,20 @@
+# [1.7.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.6.0...v1.7.0) (2022-01-08)
+
+
+### Bug Fixes
+
+* the sklearn_classifier now works ([04662d7](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/04662d720720620cdca300dc0cdda110dfaeb40a))
+
+
+### Features
+
+* now the sklearn_classifier returns the best classifier obtained ([6d189f9](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/6d189f90e7ba4285e1eb4f2d93ec2a668926bac7))
+
+
+### Performance Improvements
+
+* changed the sklearn_classifier to make a clean report ([a8363de](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/a8363de9e2c34c9a6b2ce129101ea8ad06dfba61))
+
 # [1.6.0](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.5.0...v1.6.0) (2022-01-08)
 
 
