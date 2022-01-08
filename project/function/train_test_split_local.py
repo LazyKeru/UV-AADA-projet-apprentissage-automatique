@@ -5,8 +5,11 @@ import pandas as pd
 def train_test_split_local(data_frame,test_size=0.1):
     """
     Divides the data frame into two parts, and removes their label
-    the index is : the action id, the subject id and the experiment id
-    the label is the action column
+    the index is the action id, the subject id and the experiment id
+    and the label is the action column
+    :param DataFrame data_frame: DataFrame that is returned by the feature_extraction function
+    :param float test_size: percentage to split the data_frame
+    :return: 4 DataFrame (x_train, x_test, y_train, y_test)
     """
     data_frame_size = len(data_frame)
     # Basic errors:
