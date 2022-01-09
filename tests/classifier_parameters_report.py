@@ -10,7 +10,7 @@ import project.function as pf
 # dirname = os.path.dirname(__file__)
 # data_path = os.path.join(dirname, 'dataset')
 data_path =(os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')),'dataset'))
-report_path =(os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')),'tests/report/classifier_parameters_report.html'))
+report_path =(os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')),'tests/reports/classifier_parameters_report.html'))
 
 data = pf.load_data(data_path)
 print(data)
