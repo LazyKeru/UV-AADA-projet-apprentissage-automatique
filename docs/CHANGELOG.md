@@ -1,3 +1,10 @@
+## [1.8.4](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.8.3...v1.8.4) (2022-01-10)
+
+
+### Bug Fixes
+
+* fixed a few things - split the requirements into two files, corrected classifier_parameters_selection module ([32daec5](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/32daec5153e612327911a0354782654376794f24))
+
 ## [1.8.3](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.8.2...v1.8.3) (2022-01-10)
 
 
