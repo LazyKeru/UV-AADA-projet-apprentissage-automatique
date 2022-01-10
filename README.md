@@ -103,6 +103,12 @@ As we can see with the matrix, this model obtained almost a 100% True Positive a
 
 [![semantic-version](https://img.shields.io/github/workflow/status/LazyKeru/UV-AADA-projet-apprentissage-automatique/Semantic-version?style=plastic)](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/actions/workflows/semantic-versioning.yml)
 
+### Run Python Tests
+[![Run Python Tests](https://img.shields.io/github/workflow/status/LazyKeru/UV-AADA-projet-apprentissage-automatique/Semantic-version?style=plastic)](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/actions/workflows/python-tests.yml)
+#### test are runned for:
+- ./project/function/load_data module with ./tests/test_load_data
+- ./project/function/feature_extraction with ./tests/test_feature_extraction.py
+
 ## Commit convention :
 - build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
 - ci: Changes to our CI configuration files and scripts (examples: CircleCi, SauceLabs)
