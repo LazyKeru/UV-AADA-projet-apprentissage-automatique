@@ -5,7 +5,8 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import project.function as pf
-
+from sklearn.neural_network import MLPClassifier
+from sklearn.svm import SVC
 
 # dirname = os.path.dirname(__file__)
 # data_path = os.path.join(dirname, 'dataset')
