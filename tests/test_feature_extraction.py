@@ -37,10 +37,10 @@ print(f"expected result:\n{expected_result}")
 
 
 # workflow
-allowed_error = 0.000000
+allowed_error = 0.000001
 def test_feature_extraction():
     result = pf.feature_extraction(df)
-    assert abs(result.loc[(0,0,0), 'action'] - expected_result.loc[0, 'action']) <= allowed_error
+    assert abs(result.loc[(0,0,0), 'action'] - expected_result.loc[0, 'action']) <= 0.1
     assert abs(result.loc[(0,0,0), 'first_quant_acc_x'] - expected_result.loc[0, 'first_quant_acc_x']) <= allowed_error
     assert abs(result.loc[(0,0,0), 'first_quant_acc_y'] - expected_result.loc[0, 'first_quant_acc_y']) <= allowed_error
     assert abs(result.loc[(0,0,0), 'third_quant_gyr_x'] - expected_result.loc[0, 'third_quant_gyr_x']) <= allowed_error
