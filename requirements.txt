@@ -2,5 +2,5 @@ matplotlib==3.3.4
 numpy==1.19.5
 pandas==1.1.5
 sklearn==0.0
-scipy==1.7.3
+scipy==1.5.4
 sys==0.0
