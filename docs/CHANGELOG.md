@@ -1,3 +1,11 @@
+## [1.8.2](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.8.1...v1.8.2) (2022-01-09)
+
+
+### Performance Improvements
+
+* added GaussianNB classifier ([077484b](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/077484b2ee5f86ebd4558db613528496bbaf6414))
+* added new classifiers with other parameters ([5d43b48](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/5d43b483dd647a046dec335c18d1f6ce0b2199e9))
+
 ## [1.8.1](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.8.0...v1.8.1) (2022-01-08)
 
 
