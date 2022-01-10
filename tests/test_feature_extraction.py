@@ -35,12 +35,14 @@ print(f"result:\n{pf.feature_extraction(df)}")
 print(f"expected result:\n{expected_result}")
 
 
+
 # workflow
+allowed_error = 0.000000
 def test_feature_extraction():
     result = pf.feature_extraction(df)
-    assert result.loc[(0,0,0), 'action'] == expected_result.loc[0, 'action']
-    assert result.loc[(0,0,0), 'first_quant_acc_x'] == expected_result.loc[0, 'first_quant_acc_x']
-    assert result.loc[(0,0,0), 'first_quant_acc_y'] == expected_result.loc[0, 'first_quant_acc_y']
-    assert result.loc[(0,0,0), 'third_quant_gyr_x'] == expected_result.loc[0, 'third_quant_gyr_x']
-    assert result.loc[(0,0,0), 'third_quant_gyr_y'] == expected_result.loc[0, 'third_quant_gyr_y']
-    assert result.loc[(0,0,0), 'third_quant_gyr_z'] == expected_result.loc[0, 'third_quant_gyr_z']
+    assert abs(result.loc[(0,0,0), 'action'] - expected_result.loc[0, 'action']) <= allowed_error
+    assert abs(result.loc[(0,0,0), 'first_quant_acc_x'] - expected_result.loc[0, 'first_quant_acc_x']) <= allowed_error
+    assert abs(result.loc[(0,0,0), 'first_quant_acc_y'] - expected_result.loc[0, 'first_quant_acc_y']) <= allowed_error
+    assert abs(result.loc[(0,0,0), 'third_quant_gyr_x'] - expected_result.loc[0, 'third_quant_gyr_x']) <= allowed_error
+    assert abs(result.loc[(0,0,0), 'third_quant_gyr_y'] - expected_result.loc[0, 'third_quant_gyr_y']) <= allowed_error
+    assert abs(result.loc[(0,0,0), 'third_quant_gyr_z'] - expected_result.loc[0, 'third_quant_gyr_z']) <= allowed_error
