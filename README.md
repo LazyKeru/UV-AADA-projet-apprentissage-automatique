@@ -3,6 +3,15 @@ The objective of this project is to create a system for recognizing human action
 
 ## How to test our project
 
+We will run ./tests/main.py which will use almost all our modules :
+- load_data
+- feature_extraction
+- train_test_split_local
+- standarize_data
+- classifier_parameters_report
+
+A few module won't be used like the trace_signal. You can test it out by following the same steps, except running their ./tests/"function_name".py
+
 ### install dependencies
 
 #### if you are using python2
@@ -76,7 +85,7 @@ How to read the matrix :
 |   Positive (P)   | True positive (TP)  | False negative (FN) |
 |   Negative (N)   | False positive (FP) | True negative (TN)  |
 
-As we can see with the matrix, this model obtained almost a 100% True Positive and True Negative
+As we can see with the matrix, this model obtained almost 100% True Positive and True Negative
 
 ##### One of the best score obtained with this SVC classifier :
 
@@ -94,8 +103,8 @@ As we can see with the matrix, this model obtained almost a 100% True Positive a
 - [x] classifier_parameters_report module
 - [x] tutorial
 - [x] requirements.txt
-- [ ] better desciption
-- [ ] save_model module
+- [X] better desciption
+- [X] save_model module
 
 ## workflows
 

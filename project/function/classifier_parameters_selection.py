@@ -14,15 +14,16 @@ default_names = [
     "MLPClassifier", # Neural network models
     "SVC", # Support Vector Machines
     "KNeighborsClassifier", # k nearest neighbors method
-    #"DecisionTreeClassifier", # decision trees
-    #"Gaussian Naive Bayes", # Naïve Bayes
+    "DecisionTreeClassifier", # decision trees
+    "GaussianNB", # Naïve Bayes
 ]
 
 default_classifiers = [
     MLPClassifier(),
     SVC(),
     KNeighborsClassifier(),
-    DecisionTreeClassifier(criterion=['gini', 'entropy'])
+    DecisionTreeClassifier(),
+    GaussianNB(),
 ]
 
 default_parameters = [
@@ -37,9 +38,9 @@ default_parameters = [
     },
     {
         'C': [0.5, 1.0, 1.5, 2.0], # default=1.0
-        # 'kernel': ['linear', 'poly', 'rbf', 'sigmoid', 'precomputed'], # {‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’} or callable, default=’rbf’
-        'degree': [3], # default=3
-        # 'gamma': ['scale', 'auto'], # {‘scale’, ‘auto’} or float, default=’scale’
+        'kernel': ['linear', 'poly', 'rbf', 'sigmoid'], # {‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’} or callable, default=’rbf’
+        # 'degree': [3], # default=3
+        'gamma': ['scale', 'auto'], # {‘scale’, ‘auto’} or float, default=’scale’
         # 'coef0': [0.0], # default=0.0
         # Many more config : https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
     },
@@ -53,6 +54,10 @@ default_parameters = [
         'criterion':['gini','entropy'],
         'max_depth':[5,10,15,20]
         # Many more config : https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+    },
+    {
+        'var_smoothing': np.logspace(0,-9, num=100),
+        # Many more config : https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
     }
 ]
 
@@ -67,11 +72,12 @@ def classifier_parameters_selection(x_train, x_test, y_train, y_test, names=defa
     :param array names: the names of the classifiers
     :param array classifiers: the function of the classifiers
     :param array parameters: the parameters of the classifiers
-    :return:
+    :return: it returns the prediction
     """
     clfs = {}
     for name, classifier, parameter in zip(names, classifiers, parameters):
         print(f"Start GridSearchCV for {name} classifier")
+        #Exhaustive search over specified parameter for a specific classifier
         clf = GridSearchCV(classifier, parameter, scoring='precision_macro')
         clf.fit(x_train, y_train)
         clf.predict(x_test)

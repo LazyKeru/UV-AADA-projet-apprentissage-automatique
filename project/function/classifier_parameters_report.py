@@ -87,6 +87,7 @@ def classifier_parameters_report(report_path, x_train, x_test, y_train, y_test, 
     """
     Exhaustive search over specified parameter for a large pannel of classifier.
     returns the best model and writes an html report
+    :param string report_path: path to print html report
     :param dataframe x_train: the data to train the model
     :param dataframe x_test: the data to test the model
     :param dataframe y_train: the labels of the data to train the model
@@ -94,13 +95,14 @@ def classifier_parameters_report(report_path, x_train, x_test, y_train, y_test, 
     :param array names: the names of the classifiers
     :param array classifiers: the function of the classifiers
     :param array parameters: the parameters of the classifiers
-    :return:
+    :return: best classifier
     """
     clfs = {}
     for name, classifier, parameter in zip(names, classifiers, parameters):
         clf = classifier_parameters_selection(name, classifier, parameter, x_train, x_test, y_train, y_test)
         clfs[name] = clf
         pass
+    #preparing report
     report = ''
     for name, clf in clfs.items():
         report = report + f'''
@@ -131,7 +133,7 @@ def classifier_parameters_report(report_path, x_train, x_test, y_train, y_test, 
         <p>best_score_ for {name} classifier\n{clf.best_score_}</p>
         '''
         pass
-    # Prepares the html text
+    # Prepares the full html document
     html = f'''
     <html>
         <head>
