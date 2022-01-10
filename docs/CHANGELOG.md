@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.8.2...v1.8.3) (2022-01-10)
+
+
+### Bug Fixes
+
+* fixed the workflow python tests ([897fac4](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/commit/897fac4e769bc1888bf41895df76f17446d305a6))
+
 ## [1.8.2](https://github.com/LazyKeru/UV-AADA-projet-apprentissage-automatique/compare/v1.8.1...v1.8.2) (2022-01-09)
 
 
