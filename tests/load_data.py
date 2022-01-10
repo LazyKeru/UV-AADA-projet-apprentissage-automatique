@@ -9,5 +9,10 @@ import project.function as pf
 # dirname = os.path.dirname(__file__)
 # data_path = os.path.join(dirname, 'dataset')
 data_path =(os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')),'dataset'))
-data = pf.load_data(data_path)
-print(data)
+
+# workflow
+def test_load_data():
+    data = pf.load_data(data_path)
+    return data
+
+print(test_load_data())
